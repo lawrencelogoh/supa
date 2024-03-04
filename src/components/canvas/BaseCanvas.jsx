@@ -3,16 +3,19 @@ import CameraAnimations from "./CameraManager";
 import Lights from "./cosmetics/Lights";
 import Floor from "./cosmetics/Floor";
 import Fog from "./cosmetics/Fog";
-import { InitConstants } from "@/components/data/InitConstants";
+// import { InitConstants } from "@/components/data/InitConstants";
+import { InitConstants } from "../../components/data/InitConstants";
+import TempCube from "./TempCube";
+//drei might already have move tool
+import { GizmoHelper, PivotControls } from "@react-three/drei";
+import GizmoTemp from "./cosmetics/GizmoTemp";
 
 const BaseCanvas = () => {
   const { backgroundColor } = InitConstants;
   return (
     <Canvas style={{ background: backgroundColor }}>
-      <mesh position={[0, 1 / 2, 0]}>
-        <boxGeometry />
-        <meshStandardMaterial roughness={0.3} color={"lightgray"} />
-      </mesh>
+      <GizmoTemp />
+      <TempCube />
       <Lights />
       <Floor />
       <Fog />

@@ -1,5 +1,11 @@
+import StatusBar from "./StatusBar";
+
 const BaseDom = () => {
-  return <div>This is the UI</div>;
+  return (
+    <div>
+      <StatusBar />
+    </div>
+  );
 };
 
 export default BaseDom;

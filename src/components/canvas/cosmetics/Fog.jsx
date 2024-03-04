@@ -1,11 +1,12 @@
-import { InitConstants } from "@/components/data/InitConstants";
+import { InitConstants } from "../../../components/data/InitConstants";
+// import { InitConstants } from "@/components/data/InitConstants";
 
 const Fog = () => {
   const { backgroundColor } = InitConstants;
 
   return (
     <>
-      <fog attach="fog" color={backgroundColor} near={3} far={13} />
+      <fog attach="fog" color={backgroundColor} near={10} far={20} />
     </>
   );
 };
